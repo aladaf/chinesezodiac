@@ -12,6 +12,15 @@
     }
   },
   "Outputs": {
+    "ddbChineseAnimal": {
+      "Description": "Stream ARN of DynamoDB table ChineseAnimal",
+      "Value": {
+        "Fn::GetAtt": [
+          "ddbChineseAnimal",
+          "StreamArn"
+        ]
+      }
+    },
     "ChineseZodiac": {
       "Description": "ARN of Lambda function ChineseZodiac",
       "Value": {
@@ -48,7 +57,10 @@
             "KeyType": "HASH"
           }
         ],
-        "BillingMode": "PAY_PER_REQUEST"
+        "BillingMode": "PAY_PER_REQUEST",
+        "StreamSpecification": {
+          "StreamViewType": "NEW_IMAGE"
+        }
       }
     },
     "ChineseZodiac": {
@@ -126,6 +138,21 @@
                       "Arn"
                     ]
                   }
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "dynamodb:ListStreams",
+                    "dynamodb:DescribeStream",
+                    "dynamodb:GetShardIterator",
+                    "dynamodb:GetRecords"
+                  ],
+                  "Resource": {
+                    "Fn::GetAtt": [
+                      "ddbChineseAnimal",
+                      "StreamArn"
+                    ]
+                  }
                 }
               ]
             }
@@ -142,6 +169,38 @@
         },
         "Principal": "alexa-appkit.amazon.com",
         "EventSourceToken": "amzn1.ask.skill.4ed8792e-1802-4956-9cb0-b2ab090ade92"
+      }
+    },
+    "ddbChineseAnimalTriggerChineseZodiac0": {
+      "Type": "AWS::Lambda::EventSourceMapping",
+      "Properties": {
+        "BatchSize": "100",
+        "EventSourceArn": {
+          "Fn::GetAtt": [
+            "ddbChineseAnimal",
+            "StreamArn"
+          ]
+        },
+        "StartingPosition": "TRIM_HORIZON",
+        "FunctionName": {
+          "Ref": "ChineseZodiac"
+        }
+      }
+    },
+    "ddbChineseAnimalPermissionChineseZodiac": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Ref": "ChineseZodiac"
+        },
+        "SourceArn": {
+          "Fn::GetAtt": [
+            "ddbChineseAnimal",
+            "StreamArn"
+          ]
+        },
+        "Principal": "dynamodb.amazonaws.com"
       }
     },
     "CreateAnimalTable": {

@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "ChineseZodiac.py",
         "cursor": {
-          "lineNumber": 34,
-          "column": 9
+          "lineNumber": 47,
+          "column": 35
         },
         "config": {
           "runtime": "python3.8",
@@ -26,9 +26,17 @@
           {
             "resourceName": "alexaSK4ed8792e180249569cb0b2ab090ade92",
             "config": {}
+          },
+          {
+            "resourceName": "ddbChineseAnimal",
+            "config": {
+              "StartingPosition": "TRIM_HORIZON",
+              "BatchSize": "100",
+              "StreamViewType": "NEW_IMAGE"
+            }
           }
         ],
-        "lastUpdated": 1622277328993
+        "lastUpdated": 1622283417107
       },
       "a5e78464-61ad-438a-93f4-5d6addebe875": {
         "id": "a5e78464-61ad-438a-93f4-5d6addebe875",
@@ -143,7 +151,7 @@
     "platform": "AWS",
     "language": "python",
     "platformRegions": {},
-    "lastSave": 1622277885526
+    "lastSave": 1622284498995
   },
   "VCS_STATE": {
     "provider": "GitHub",
