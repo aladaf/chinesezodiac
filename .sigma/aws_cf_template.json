@@ -108,7 +108,29 @@
               }
             }
           ]
-        }
+        },
+        "Policies": [
+          {
+            "PolicyName": "ChineseZodiacPolicy",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "dynamodb:GetItem"
+                  ],
+                  "Resource": {
+                    "Fn::GetAtt": [
+                      "ddbChineseAnimal",
+                      "Arn"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
       }
     },
     "alexaSK4ed8792e1802ChineseZodiacPermission": {

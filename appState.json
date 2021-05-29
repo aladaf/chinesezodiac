@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "ChineseZodiac.py",
         "cursor": {
-          "lineNumber": 23,
-          "column": 88
+          "lineNumber": 34,
+          "column": 9
         },
         "config": {
           "runtime": "python3.8",
@@ -28,7 +28,7 @@
             "config": {}
           }
         ],
-        "lastUpdated": 1622276852754
+        "lastUpdated": 1622277328993
       },
       "a5e78464-61ad-438a-93f4-5d6addebe875": {
         "id": "a5e78464-61ad-438a-93f4-5d6addebe875",
@@ -102,7 +102,7 @@
     "customTemplate": {
       "syntax": "JSON",
       "overrideDefault": false,
-      "dialect": null,
+      "dialect": "CloudFormation",
       "definitions": null
     },
     "envVariables": [
@@ -143,7 +143,7 @@
     "platform": "AWS",
     "language": "python",
     "platformRegions": {},
-    "lastSave": 1622276863966
+    "lastSave": 1622277885526
   },
   "VCS_STATE": {
     "provider": "GitHub",
