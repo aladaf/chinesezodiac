@@ -1,0 +1,155 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "2fa03fd4-a871-4715-a96b-91c1cd3a50fb": {
+        "id": "2fa03fd4-a871-4715-a96b-91c1cd3a50fb",
+        "parent": null,
+        "name": "ChineseZodiac.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "ChineseZodiac.py",
+        "cursor": {
+          "lineNumber": 23,
+          "column": 88
+        },
+        "config": {
+          "runtime": "python3.8",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "ChineseZodiac"
+        },
+        "triggers": [
+          {
+            "resourceName": "alexaSK4ed8792e180249569cb0b2ab090ade92",
+            "config": {}
+          }
+        ],
+        "lastUpdated": 1622276852754
+      },
+      "a5e78464-61ad-438a-93f4-5d6addebe875": {
+        "id": "a5e78464-61ad-438a-93f4-5d6addebe875",
+        "parent": null,
+        "name": "requirements.txt",
+        "type": "TEXT_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "requirements.txt"
+      },
+      "b954b867-93c8-4ea3-9e32-d5023db77c56": {
+        "id": "b954b867-93c8-4ea3-9e32-d5023db77c56",
+        "parent": null,
+        "name": "CreateAnimalTable.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "CreateAnimalTable.py",
+        "cursor": {
+          "lineNumber": 22,
+          "column": 1
+        },
+        "config": {
+          "runtime": "python3.8",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "CreateAnimalTable"
+        },
+        "triggers": [],
+        "lastUpdated": 1622276707987
+      }
+    },
+    "openFiles": [
+      "2fa03fd4-a871-4715-a96b-91c1cd3a50fb"
+    ],
+    "currentFileId": "2fa03fd4-a871-4715-a96b-91c1cd3a50fb",
+    "resources": {
+      "alexaSK4ed8792e180249569cb0b2ab090ade92": {
+        "name": "alexaSK4ed8792e180249569cb0b2ab090ade92",
+        "type": "ALEXA",
+        "config": {
+          "type": 1,
+          "verifiedID": true,
+          "skillID": "amzn1.ask.skill.4ed8792e-1802-4956-9cb0-b2ab090ade92",
+          "applicationID": ""
+        }
+      },
+      "ddbChineseAnimal": {
+        "name": "ddbChineseAnimal",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 0,
+          "table": {
+            "arn": "",
+            "name": "ChineseAnimal",
+            "partitionKey": "BirthYear",
+            "partitionKeyType": "N",
+            "hasSortKey": false,
+            "sortKey": "",
+            "sortKeyType": "S",
+            "payPerRequest": true,
+            "mode": 0
+          }
+        }
+      }
+    },
+    "customTemplate": {
+      "syntax": "JSON",
+      "overrideDefault": false,
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "ask_sdk_core": {
+          "name": "ask_sdk_core",
+          "language": "python",
+          "version": "1.13.0",
+          "dev": false,
+          "notRemovable": false
+        },
+        "boto3": {
+          "name": "boto3",
+          "language": "python",
+          "version": "1.16.43",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "sigmaVersion": "1.8.0",
+    "projectName": "ChineseZodiac",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "python",
+    "platformRegions": {},
+    "lastSave": 1622276863966
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "chinesezodiac",
+      "url": "https://github.com/aladaf/chinesezodiac"
+    }
+  }
+}
